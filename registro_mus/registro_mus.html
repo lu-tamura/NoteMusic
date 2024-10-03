@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Música</title>
+    <link rel="stylesheet" href="registro_mus_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Música</h1>
+
+        <form action="processar-registro-mus.php" method="post">
+            <label for="nome">Nome da Música:</label>
+            <input type="text" name="nome" placeholder="Digite o nome da música" required><br>
+
+            <label for="album">Álbum:</label>
+            <input type="text" name="album" placeholder="Digite o nome do álbum" required><br>
+
+            <label for="artista">Artista:</label>
+            <input type="text" name="artista" placeholder="Digite o nome do artista" required><br>
+
+            <label for="genero">Gênero:</label>
+            <select name="genero" required>
+                <option value="" disabled selected>Escolha um gênero</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="sertanejo">Sertanejo</option>
+                <option value="hip-hop">Hip-Hop</option>
+                <option value="eletronica">Eletrônica</option>
+                <option value="pagode">Pagode</option>
+                <option value="samba">Samba</option>
+                <option value="kpop">Kpop</option>
+                <option value="infantil">Infantil</option>
+            </select><br>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        
+    </div>
+</body>
+</html>
