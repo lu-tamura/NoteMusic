@@ -19,6 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
+    // Capturar data e hora atuais
+    $data_atual = date('d/m/Y'); // Data no formato 'dd/mm/aaaa'
+    $hora_atual = date('H:i:s'); // Hora no formato 'hh:mm:ss'
+
     // Preparar a consulta SQL para evitar SQL Injection
     $sql = "SELECT senha FROM cadastros WHERE email = ?";
 
@@ -36,18 +40,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $senha = trim($senha);
             $senha_armazenada = trim($senha_armazenada);
 
-            // Exibir as senhas para depuração
-            echo "Senha armazenada no banco de dados (em texto simples): <br>";
-            var_dump($senha_armazenada); // Usamos var_dump para visualizar caracteres invisíveis
-            echo "<br>";
-
-            echo "Senha fornecida pelo usuário: <br>";
-            var_dump($senha); // Usamos var_dump para visualizar caracteres invisíveis
-            echo "<br>";
-
             // Comparar as senhas
             if ($senha === $senha_armazenada) {
                 echo "Login bem-sucedido!";
+
+                // Agora vamos registrar o login na tabela "logins"
+                $insert_sql = "INSERT INTO logins (email, senha, data, hora) VALUES (?, ?, ?, ?)";
+
+                if ($insert_stmt = $conn->prepare($insert_sql)) {
+                    $insert_stmt->bind_param("ssss", $email, $senha, $data_atual, $hora_atual);
+                    $insert_stmt->execute();
+
+                    echo " - Login registrado com sucesso!";
+                } else {
+                    echo "Erro ao registrar o login no banco de dados.";
+                }
             } else {
                 echo "Senha incorreta.";
             }
