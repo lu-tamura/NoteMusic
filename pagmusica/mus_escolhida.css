@@ -1,0 +1,60 @@
+body {
+    background-color: #0e0f11;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.container-playlist {
+    background-color: #181A1C;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.capas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.capas img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.playlist-info h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.playlist-info p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #8fcfb1;
+    color: #181a1c;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7abb9f;
+}
