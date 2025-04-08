@@ -180,3 +180,49 @@ button {
     color: #8fcfb1;
 }
 
+@media (max-width: 1710px) {
+    .cabecalho-logo {
+        margin-right: 1%;
+        margin-left: 23%;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .buscar_box {
+        background-color: #0E0F11;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid #3D3E40;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 33%;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 1614px){
+    .cabecalho-logo {
+        margin-right: -1%;
+        margin-left: 15%;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .buscar_box {
+        background-color: #0E0F11;
+        height: 40px;
+        padding: 10px;
+        border: 1px solid #3D3E40;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right:20%;
+        margin-left: 2%;
+    }
+}
+
