@@ -9,26 +9,39 @@
 </head>
 <body>
     <header class="cabecalho">
-        <div class="cabecalho-logo">
-            <img  src="notemusic.svg" alt="NOTEMUSIC">   
+    <div class="cabecalho-logo">
+        <a href="../home/home.html">
+            <img src="notemusic.svg" alt="NOTEMUSIC">
+        </a>
+    </div>
+    
+    <nav class="cabecalho-menu">
+        <ul>
+            <li><a class="cabecalho-menu-item" href="../login_user/login.html">Entrar</a></li>
+            <li><a class="cabecalho-menu-item" href="../cadastro_user/cadastro.html">Cadastre-se</a></li>
+            <li><a class="cabecalho-menu-item" href="../pagmusica/pag_musica_html.php">Música</a></li>
+            <li><a class="cabecalho-menu-item" href="../avaliação/avaliacao_mus.php">Avaliações</a></li>
+            <li><a class="cabecalho-menu-item" href="../lista/lista.php">Listas</a></li>
+            <li><a class="cabecalho-menu-item" href="../registro_musica/registro_mus.php">Adicionar Música</a></li>
+            <li><a class="cabecalho-menu-item" href="../busca_artista/pag_artista_html.php">Artista</a></li>
+            <li><a class="cabecalho-menu-item" href="../ranking/ranking.html">Ranking</a></li>
+        </ul>
+
+        <div class="buscar_box">
+        <input type="text" id="pesquisar" name="pesquisar">
+        <a href="#" class="buscar_btn">                          
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
         </div>
-        <nav class="cabecalho-menu">
-            <ul>
-                <li><a class="cabecalho-menu-item" href="../login_user/login.html">Entrar</a></li>
-                <li><a class="cabecalho-menu-item" href="../cadastro_user/cadastro.html">Cadastre-se</a></li>
-                <li><a class="cabecalho-menu-item" href="../pagmusica/pag_musica_html.php">Música</a></li>
-                <li><a class="cabecalho-menu-item" href="../avaliação/avaliacao_mus.php">Avaliações</a></li>
-                <li><a class="cabecalho-menu-item" href="../lista/lista.php">Listas</a></li>
-                <li><a class="cabecalho-menu-item" href="../registro_musica/registro_mus.php">Adicionar Música</a></li>
-            </ul>
-            <div class="buscar_box">
-                <input type="text" id="pesquisar" name="pesquisar">
-                <a href="#" class="buscar_btn">                          
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-        </nav>
+
+        <div class="perfil-usuario">
+            <a href="../perfil_user/perfil_user.php">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
     </header>
+
     <main class="conteudo">
         <section class="musicas-em-alta">
             <h2>Músicas em alta</h2>
