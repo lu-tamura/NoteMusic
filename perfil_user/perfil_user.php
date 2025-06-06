@@ -93,6 +93,7 @@ $conn->close();
     <p>Email: <?= htmlspecialchars($usuario['email']) ?></p>
 
     <button onclick="window.location.href='../home/home.html'">Voltar à Home</button>
+    <button onclick="window.location.href='../logout/logout.php'">Sair</button>
 
     <h2>Alterar Imagem de Perfil</h2>
     <form method="POST" action="">
